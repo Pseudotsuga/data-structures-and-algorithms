@@ -13,8 +13,8 @@ const greeting = (word) => {
 };
 
 const speaker = (message, callback) => {
-  callback = greeting(message);
-  return callback;
+  callback = greeting;
+  return callback(message);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,7 +38,11 @@ const addValues = (arr, value) => {
 };
 
 const addNumbers = (num, arr, times, callback) => {
-
+  callback = addValues;
+  for (var i = 0; i < times; i++){
+    callback(arr,num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
