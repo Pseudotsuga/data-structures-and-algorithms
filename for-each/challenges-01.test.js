@@ -94,7 +94,7 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  arr.forEach((value, index, arr) => {
+  arr.forEach( (value, index, arr) => {
     if (value % 3 === 2){
       arr.pop();
     }
@@ -105,7 +105,7 @@ const removeWithAnon = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named createList that takes in an array of the current store intentory.
+Write a function named createList that takes in an array of the current store inventory.
 
 The inventory is formatted like this:
 [
@@ -120,7 +120,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  availableItems = [];
+  inventory.forEach(item => {
+    if (item.available === true){
+      availableItems.push(item);
+    }
+  });
+  return availableItems;
 };
 
 /* ------------------------------------------------------------------------------------------------
