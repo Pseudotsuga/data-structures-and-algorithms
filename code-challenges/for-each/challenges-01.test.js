@@ -57,11 +57,7 @@ Then, write a function named removeElements that takes in an array and a callbac
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-const removeOne = (num, arr) => {
-  if (num % 3 === 2){
-    arr.pop();
-  }
-};
+const removeOne = (num, arr) => num % 3 === 2 ? arr.pop() : false;
 
 const removeElements = (arr, callback) => {
   callback = removeOne;
