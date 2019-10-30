@@ -106,7 +106,7 @@ describe('Testing challenge 2', () => {
 
 describe('Testing challenge 3', () => {
   test('It should add a property to an object', () => {
-    const a = { fullName: 'Octavia Butler' };
+    const a = { fullName: 'Octavia Butler', };
     addBirthYearProperty(a, 1947);
 
     expect(a.yearBorn).toStrictEqual(1947);
@@ -115,7 +115,7 @@ describe('Testing challenge 3', () => {
 
 describe('Testing challenge 4', () => {
   test('It should add a property to every object in an array', () => {
-    const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
+    const a = [{ fullName: 'Octavia Butler', }, { fullName: 'Ray Bradbury', }, { fullName: 'Kurt Vonnegut', }];
     setStatusAsAuthor(a);
 
     expect(a[0].isAuthor).toStrictEqual(true);
