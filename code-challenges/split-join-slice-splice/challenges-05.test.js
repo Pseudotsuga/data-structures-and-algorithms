@@ -144,7 +144,17 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-
+  const targetList = [];
+  arr.forEach( number => {
+    if (number % 2 === 0){
+      targetList.push(number);
+    }
+  });
+  targetList.forEach( target => {
+    let targetPosition = arr.indexOf(target);
+    arr.splice(targetPosition, 1);
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
