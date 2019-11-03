@@ -99,8 +99,15 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
-  let result = [];
-  //result code
+  const result = [];
+  recipe.ingredients.forEach( ingredient => {
+    let ingredientArray = ingredient.split(' ');
+    for (let i = 0; i < 2; i++){
+      ingredientArray.shift();
+    }
+    let ingredientString = ingredientArray.join(' ');
+    result.push(ingredientString);
+  });
   return result;
 };
 
