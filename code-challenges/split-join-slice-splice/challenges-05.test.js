@@ -209,12 +209,14 @@ For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
 const removeVowels = (str) => {
-  const badLetters = ['a', 'e', 'i', 'o', 'u'];
+  let badLetters = ['a', 'e', 'i', 'o', 'u'];
   let stringArray = str.split('');
-  badLetters.forEach( vowel => {
-    let vowelChecker = stringArray.indexOf(vowel);
-    if (vowelChecker !== -1){
-      stringArray.splice(vowelChecker , 1);
+  let targetLetterPostion;
+  stringArray.forEach( letter => {
+    let vowelChecker = badLetters.includes(letter);
+    if (vowelChecker === true){
+      targetLetterPostion = stringArray.indexOf(letter);
+      stringArray.splice(targetLetterPostion, 1);
     }
   });
   let newString = stringArray.join('');
@@ -232,7 +234,36 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 ------------------------------------------------------------------------------------------------ */
 
 const extractVowels = (str) => {
-  // Solution code here...
+  const answerArray = [];
+  const lettersRemoved = [];
+  let lettersRemovedAlphabeticallyArray;
+  let lettersRemovedAlphabetically;
+  let badLetters = ['a', 'e', 'i', 'o', 'u'];
+  let newString;
+  let targetLetterPosition;
+
+  let stringArray = str.split('');
+  stringArray.forEach( letter => {
+    console.log('this is the letter being tested', letter);
+    let vowelChecker = badLetters.includes(letter);
+    if (vowelChecker === true){
+      lettersRemoved.push(letter);
+    }
+  });
+
+  lettersRemoved.forEach( letter => {
+    targetLetterPosition = stringArray.indexOf(letter);
+    stringArray.splice(targetLetterPosition, 1);
+  });
+
+  newString = stringArray.join('');
+  answerArray.push(newString);
+
+  lettersRemovedAlphabeticallyArray = lettersRemoved.sort();
+  lettersRemovedAlphabetically = lettersRemovedAlphabeticallyArray.join('');
+  answerArray.push(lettersRemovedAlphabetically);
+  
+  return answerArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
