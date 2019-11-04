@@ -1,5 +1,7 @@
 'use strict';
 
+// import { parse } from "@babel/core";
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -172,13 +174,16 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
-  arr.sort((a, b) => {
+  let newArr = sortMeetingsByDay(arr);
+  newArr.sort((a, b) => {
     if (a.dayOfWeek === b.dayOfWeek && a.start === b.start){
       return (parseInt(a.end, 10) - parseInt(a.start, 10)) - (parseInt(b.end, 10) - parseInt(b.start, 10));
     }
-    else return (parseInt(a.start, 10) - parseInt(b.start, 10));
+    else if (a.dayOfWeek === b.dayOfWeek){
+      return (parseInt(a.start, 10) - parseInt(b.start, 10));
+    }
   });
-  return arr;
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
