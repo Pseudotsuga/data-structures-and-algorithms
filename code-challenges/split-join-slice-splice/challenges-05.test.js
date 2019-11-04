@@ -261,7 +261,7 @@ const extractVowels = (str) => {
   lettersRemovedAlphabeticallyArray = lettersRemoved.sort();
   lettersRemovedAlphabetically = lettersRemovedAlphabeticallyArray.join('');
   answerArray.push(lettersRemovedAlphabetically);
-  
+
   return answerArray;
 };
 
