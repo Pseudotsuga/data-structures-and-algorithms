@@ -244,7 +244,6 @@ const extractVowels = (str) => {
 
   let stringArray = str.split('');
   stringArray.forEach( letter => {
-    console.log('this is the letter being tested', letter);
     let vowelChecker = badLetters.includes(letter);
     if (vowelChecker === true){
       lettersRemoved.push(letter);
