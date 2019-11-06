@@ -109,7 +109,16 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let flag = null;
+  arr.forEach( thronesPerson => {
+    if(Object.entries(thronesPerson)[0][1] === character){
+      if(Object.entries(thronesPerson)[2][1].length !== 0){
+        flag = true;
+      }
+      else flag = false;
+    }
+  });
+  return flag;
 };
 
 /* ------------------------------------------------------------------------------------------------
