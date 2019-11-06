@@ -106,9 +106,7 @@ const snorlaxAbilities = {
   weight: 4600,
 };
 
-const extractAbilities = (arr) => {
-  // Solution code here...
-};
+const extractAbilities = (arr) => arr.map( slot => slot = slot.ability.name);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
