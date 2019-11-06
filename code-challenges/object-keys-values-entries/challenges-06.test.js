@@ -68,9 +68,7 @@ let characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  arr.forEach( thronesPerson => {
-    houses.push(thronesPerson.house);
-  });
+  
   return houses;
 };
 
@@ -87,17 +85,8 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  let flag = null;
-  arr.forEach( thronesPerson => {
-    if( Object.values(thronesPerson)[0] === character){
-      if (thronesPerson.children.length !== 0){
-        flag = true;
-      }
-      else {
-        flag = false;}
-    }
-  });
-  return flag;
+  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -109,16 +98,7 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  let flag = null;
-  arr.forEach( thronesPerson => {
-    if(Object.entries(thronesPerson)[0][1] === character){
-      if(Object.entries(thronesPerson)[2][1].length !== 0){
-        flag = true;
-      }
-      else flag = false;
-    }
-  });
-  return flag;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,17 +108,7 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  let counter = 0;
-  arr.forEach ( character =>{
-    counter++;
-    if(character.spouse){ 
-      counter ++;
-    }
-    if (character.children){
-      counter += character.children.length;
-    }
-  });
-  return counter;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
