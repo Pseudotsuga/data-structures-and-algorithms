@@ -1,5 +1,7 @@
 'use strict';
 
+import { strict } from "assert";
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -21,9 +23,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 ------------------------------------------------------------------------------------------------ */
 
 
-const filterStringsWithVowels = (arr) => {
-  // Solution code here...
-};
+const filterStringsWithVowels = (arr) => arr.filter( string => string.match(/[aeiou]/g) ? true : false);
 
 
 /* ------------------------------------------------------------------------------------------------
