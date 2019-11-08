@@ -154,9 +154,13 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
-};
-
+  const numObj = arr.reduce( (accumulator, value) => {
+    accumulator.count += 1;
+    accumulator.sum += value;
+    return accumulator;
+  }, {count: 0, sum: 0});
+  return numObj.sum / numObj.count;
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
