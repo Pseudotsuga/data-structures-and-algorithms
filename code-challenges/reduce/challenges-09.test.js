@@ -83,7 +83,10 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  const splitStr =str.split('');
+  return splitStr.reduce( (accumulator, value) => {
+    return value + accumulator;
+  },'');
 };
 
 /* ------------------------------------------------------------------------------------------------
