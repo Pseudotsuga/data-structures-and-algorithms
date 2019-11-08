@@ -221,6 +221,7 @@ const extractStat = (statName, arr) => arr.reduce((acc, val) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
+  // Solution code here...
 
 Write a function named extractChildren that, given the array of characters from challenge 4, accomplishes the following:
 
@@ -229,9 +230,10 @@ Write a function named extractChildren that, given the array of characters from 
 2) Then, uses reduce to return an array of all the children's names in the filtered array
 ------------------------------------------------------------------------------------------------ */
 
-const extractChildren = (arr) => {
-  // Solution code here...
-};
+const extractChildren = (arr) => arr.filter( character => {
+  return character.name.includes('a');})
+  .reduce( (acc,val) => val.children ? acc.concat(val.children) : acc, []);
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
