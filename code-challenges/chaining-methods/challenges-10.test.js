@@ -130,8 +130,7 @@ let findShortest = (data) => {
   let reduceData = data.map( character => ({name: character.name, height: character.height}));
   let answerObj = reduceData.reduce((acc, val) => {
     if(parseInt(val.height, 10) < parseInt(acc.height, 10)){
-      acc.name = val.name;
-      acc.height = val.height;
+      acc = val;
     }
     return acc;
   });
