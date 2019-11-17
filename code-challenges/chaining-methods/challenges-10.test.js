@@ -28,13 +28,7 @@ You may want to use filter, map, or reduce for this problem, but are not require
 For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
-const totalSum = (input) => {
-  return input.reduce((acc, val) => {
-    return acc + val.reduce((acc2, val2) => {
-      return acc2 + val2;
-    });
-  }, 0);
-};
+const totalSum = (input) => input.reduce((acc, val) => acc + val.reduce((acc2, val2) => acc2 + val2), 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -49,7 +43,7 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  return input.map()
 };
 
 /* ------------------------------------------------------------------------------------------------
