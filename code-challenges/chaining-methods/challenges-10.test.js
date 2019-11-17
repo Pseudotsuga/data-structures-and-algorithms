@@ -10,15 +10,13 @@ Note: You might need to use the same method more than once.
 
 For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
-//TODO: Refactor this test for 2-dimensional arrays.
 const count = (target, input) => {
-  let ans = input.reduce((acc, val) => {
+  return input.reduce((acc, val) => {
     let internalCount= val.reduce((acc2, val2) => {
       return val2 === target ? acc2 + 1 : acc2 + 0;
     }, 0)
     return acc + internalCount;
   }, 0)
-  return ans;
 }
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -31,7 +29,11 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  //TODO: 
+  return input.reduce((acc, val) => {
+    return acc + val.reduce((acc2, val2) => {
+      return acc2 + val2;
+    });
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
