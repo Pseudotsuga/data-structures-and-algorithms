@@ -49,8 +49,13 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
-};
+  return !arr.reduce((answer, string) => {
+    if (string.includes(':)')) answer += 'true';
+    else answer += 'false';
+    return answer;
+  }, '')
+    .includes('false')
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
