@@ -23,7 +23,7 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  let answer = hoursOpen.map( hourOpen => hourOpen = 0);
+  let answer = hoursOpen.map( hourOpen => 0);
   stores.forEach( store => {
     store.forEach((hour, index) => {
       answer[index] += hour;
@@ -42,7 +42,11 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let answer = [];
+  data.forEach((hourlySalesTotal,index) => {
+    answer.push({sales: `${hourlySalesTotal} cookies`, time: `${hours[index]}`});
+  });
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
