@@ -154,7 +154,19 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  let checkedAreaResults = [];
+  let correctPositions = [[0, 1, 2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+  let flat = board.reduce((accumulator, value) => {
+    return accumulator.concat(value);
+  }, []);
+  correctPositions.forEach( solution => {
+    checkedAreaResults.push(solution.reduce((acc, val) => {
+      return acc + flat[val];
+    }, ''));
+  })
+  return checkedAreaResults.includes('XXX') ? true :
+    checkedAreaResults.includes('OOO') ? true :
+      false ;
 };
 
 /* ------------------------------------------------------------------------------------------------
