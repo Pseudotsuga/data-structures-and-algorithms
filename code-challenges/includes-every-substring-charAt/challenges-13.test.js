@@ -38,9 +38,9 @@ Write a function named onlyOddChars that takes in a string and returns only the 
 For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
-const onlyOddChars = (str) => {
-  // Solution code here...
-};
+const onlyOddChars = (str) => str.split('')
+  .filter((_, index) => index % 2 !== 0)
+  .join('');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
