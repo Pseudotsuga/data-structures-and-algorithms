@@ -128,11 +128,7 @@ Write a function named characterByIndex that takes in an array of strings and re
 For example, ['abcd', 'efgh', 'ijkl', 'mnop'] returns ['a', 'f', 'k', 'p']
 ------------------------------------------------------------------------------------------------ */
 
-const characterByIndex = (arr) => {
-  return arr.map((string, index) => {
-    return string.substring(index, index + 1);
-  });
-};
+const characterByIndex = (arr) => arr.map((string, index) => string.substring(index, index + 1));
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
