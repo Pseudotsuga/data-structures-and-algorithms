@@ -63,7 +63,7 @@ CHALLENGE 6
 Write a function named findAnything that takes in an array of strings, along with a target string. Return an array containing only those strings from the original array that contain the target string.
 ------------------------------------------------------------------------------------------------ */
 
-const findAnything = (arr, target) => arr.filter( string => string.includes(target));
+const findAnything = (arr, target) => arr.filter(string => string.includes(target));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -71,9 +71,7 @@ CHALLENGE 7
 Write a function named findEvery that takes in an array of strings, along with a target string. Return a Boolean based on whether or not every string in the array contains the target string.
 ------------------------------------------------------------------------------------------------ */
 
-const findEvery = (arr, target) => {
-  // Solution code here...
-};
+const findEvery = (arr, target) => !arr.map( string => string.includes(target)).includes(false);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
