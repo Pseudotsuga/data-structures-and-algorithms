@@ -113,12 +113,8 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  if(property === 'price')return arr.sort((a,b) => {
-    return a[property] - b[property];
-  });
-  else return arr.sort((a,b) => {
-    return a[property].substring(0, 1).charCodeAt() - b[property].substring(0, 1).charCodeAt();
-  });
+  if(property === 'price')return arr.sort((a,b) => a[property] - b[property]);
+  else return arr.sort((a,b) => a[property].substring(0, 1).charCodeAt() - b[property].substring(0, 1).charCodeAt());
 };
 
 /* ------------------------------------------------------------------------------------------------
